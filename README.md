@@ -7,6 +7,7 @@
 ## Objectives
 
 - identify when a problem is amenable to a recursive solution and use recursion to solve it
+  (A) Recursion will always be a canidate for a problem to solve. look for keywords. "compute the nth term of", "list the first n terms of", "generate all possible permutations" are good give aways of when you can use recursion.
 - trace and accurately identify the output of a recursive function call
 - write a recursive solution to a problem
 - distinguish when to use, classify the performance, and implement code to conduct classic recursive sorting algorithms
@@ -66,8 +67,8 @@ to complete the algorithm grows proportionately.
 But the _space_ complexity is `O(1)`. The additional space required to complete
 the algorithm was:
 
-* `result`: `O(1)`
-* `v`: `O(1)`
+- `result`: `O(1)`
+- `v`: `O(1)`
 
 And neither of those change in size regardless of how big list `data` is. `data`
 could have a zillion elements, and the algorithm would still only require space
@@ -89,9 +90,9 @@ def alg(data):
 
 Here we have more space allocated.
 
-* `result`: `O(1)`
-* `v`: `O(1)`
-* `new_data`: `O(n)`
+- `result`: `O(1)`
+- `v`: `O(1)`
+- `new_data`: `O(n)`
 
 `new_data` gets bigger as `data` gets bigger, so it's `O(n)`. So we have:
 
@@ -160,7 +161,7 @@ So the total space complexity for this algorithm is:
 Again, compare to the `O(1)` space complexity of the initial iterative solution.
 
 In some languages, notably
-[Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) and other
+[Lisp](<https://en.wikipedia.org/wiki/Lisp_(programming_language)>) and other
 [functional programming
 languages](https://en.wikipedia.org/wiki/Functional_programming), you can write
 recursive solutions with `O(1)` space complexity. These languages take advantage
