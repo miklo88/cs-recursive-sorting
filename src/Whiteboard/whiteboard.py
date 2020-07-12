@@ -20,17 +20,22 @@
 #merge sort
 ##MERGING
 # # the goal here is to divide an array down by half until one element remains.
-# a = [7,14,6,8,12,15,2,20]
-# b = [17,4,16,18,2,5,12,2]
+a = [7,14,6,8,12,15,2,20]
+b = [17,4,16,18,2,5,12,2]
+# def merge(left, right):
 def merge(left, right):
+    
+    
      #going to need two places to store the array. left and right
+    # if len(left) == 0:
+    #     return right
     if len(left) == 0:
         return right
-    
+    print(left)
     #if nothing in the second array then return left
     if len(right) == 0:
         return left
-
+    print(right)
     result = []
     index_left = index_right = 0
 
@@ -42,10 +47,14 @@ def merge(left, right):
         if left[index_left] <= right[index_right]:
             result.append(left[index_left])
             index_left += 1
+            # print(left)
+            # print(index_left)
         else:
             result.append(right[index_right])
             index_right += 1
-        
+            # print(right)
+            # print(index_right)
+   
     #if you reach the end of either array then you can add the remaining elements from the other array to 
     #the result and break the loop
         if index_right == len(right):
@@ -56,11 +65,11 @@ def merge(left, right):
             result += right[index_right:]
             break
     return result
-# print(merge_sort(a, b))
+# print(merge(a,b))
 
 # merge_sort(arr)
-array = [17,4,16,18,2,5,12,2]
-#merge sort
+
+# #merge sort
 def merge_sort(array):
     if len(array) < 2:
         return array
@@ -72,4 +81,6 @@ def merge_sort(array):
         right=merge_sort(array[midpoint:])
     )
 
+array = [17,4,16,18,2,5,12,2]
+# print(merge_sort(a,b))
 print(merge_sort(array))
